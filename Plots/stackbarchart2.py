@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 # Load CSV file from Datasets folder
 df = pd.read_csv('../Datasets/Olympic2016Rio.csv')
 
-# Creating sum of number of cases group by Country Column
+# Creating sum of number of medals group by Name Of Country Column
 new_df = df.groupby(['NOC']).agg(
     {'Gold': 'sum', 'Silver': 'sum', 'Bronze': 'sum', 'Total': 'sum'}).reset_index()
 
